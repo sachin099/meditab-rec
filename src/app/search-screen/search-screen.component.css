@@ -1,0 +1,11 @@
+.field {
+    margin-top: 5px;
+}
+
+table,
+th,
+td {
+    border: 1px solid;
+    padding-right: 60px;
+    padding-left: 60px;
+}

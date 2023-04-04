@@ -1,0 +1,85 @@
+<div class='container-fluid'>
+    <h3>Search Patient</h3>
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="rec" style="background-color: rgb(238, 171, 109); height: 30px;">
+                Search by
+            </div>
+            <div class="rec" style="background-color: rgb(220, 217, 240); height: 300px;">
+                <div class="row container">
+                    <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        {{this.searchScreenDataModel.firstName.symbol + " " +
+                        this.searchScreenDataModel.firstName.label}}
+                    </div>
+                    <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <input type="text" [(ngModel)]="this.searchScreenDataModel.firstName.value"
+                            (keyup.enter)="onEnterPress($event)" />
+                    </div>
+                    <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        {{this.searchScreenDataModel.lastName.symbol + " " + this.searchScreenDataModel.lastName.label}}
+                    </div>
+                    <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <input type="text" [(ngModel)]="this.searchScreenDataModel.lastName.value"
+                            (keyup.enter)="onEnterPress($event)" />
+                    </div>
+                    <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        {{this.searchScreenDataModel.chartNo.symbol + " " + this.searchScreenDataModel.chartNo.label}}
+                    </div>
+                    <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <input type="text" [(ngModel)]="this.searchScreenDataModel.chartNo.value"
+                            (keyup.enter)="onEnterPress($event)" />
+                    </div>
+                    <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        {{this.searchScreenDataModel.addressOne.symbol + " " +
+                        this.searchScreenDataModel.addressOne.label}}
+                    </div>
+                    <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <input type="text" [(ngModel)]="this.searchScreenDataModel.addressOne.value"
+                            (keyup.enter)="onEnterPress($event)" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+            <div class="rec" style="background-color: rgb(238, 171, 109); height: 30px;">
+                <div class="row">
+                    <div class="field col-lg-7 col-md-7 col-sm-6 col-xs-6">
+                        <span>Search</span>
+                    </div>
+                    <div class="field col-lg-5 col-md-5 col-sm-6 col-xs-6">
+                        <span style="text-align: right;">Use % sign to search anywhere in the column</span>
+                    </div>
+                </div>
+            </div>
+            <div class="rec" style="background-color: rgb(216, 216, 216); height: 300px;">
+                <div class="row">
+                    <div class="field col-lg-8 col-md-8 col-sm-6 col-xs-6">
+                        <span><input type="text" [(ngModel)]="searchBox" (ngModelChange)="changeInSearchField($event)"
+                                style="width:100%;" /></span>
+                    </div>
+                    <div class="field col-lg-2 col-md-2 col-sm-6 col-xs-6">
+                        <span><button class="btn btn-primary" style="line-height:90%">Search</button></span>
+                    </div>
+                    <div class="field col-lg-2 col-md-2 col-sm-6 col-xs-6">
+                        <span><button class="btn btn-primary" style="line-height:90%"
+                                (click)="clearAll()">Clear</button></span>
+                    </div>
+
+                </div>
+                <div>
+                    <table style="margin-top:2%;">
+                        <thead>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Chart No</th>
+                            <th>Address 1</th>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
